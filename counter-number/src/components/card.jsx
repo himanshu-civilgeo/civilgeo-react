@@ -1,25 +1,34 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Card() {
-    const [count, setCount] = useState(0)
-
-    return (
-        <>
-
-<div className="w-60 h-60 rounded-xl">
+function Card({price = "150$"}) {
+  // const [count, setCount] = useState(0);
+// console.log("Props", props)
+    console.log
+  return (
+    <>
+      <div className="w-60 flex flex-col rounded-xl bg-black min-h-[19rem] mb-10">
+        <div>
           <img
-            src="https://media1.giphy.com/media/z8n8dWgQ0mgEIyzlmV/giphy.gif?cid=790b7611a5ba988db1bc7457636dd163c28af6f6dbc84a77&rid=giphy.gif&ct=g"
-            alt="Giphy"
-            className="rounded-t-xl"
+            src="https://cdn.vox-cdn.com/thumbor/ZkmdkuJUTLgJh96_FWQ5zweGGxo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
+            alt="test"
+            className="object-cover object-center rounded-t-xl"
           />
-          <div className="glass py-4 px-5 relative -top-[3.4rem]  rounded-b-xl z-10">
-            <h1 className="font-bold  font-mono  text-xl">Available soon</h1>
+        </div>
+        <div className="flex flex-col py-3 px-3 pb-6">
+          <div className="flex justify-between pb-3">
+            <h4 className="font-bold text-white text-left">
+              Bored ape nft accidental
+            </h4>
+            <h4 className="text-white">Price</h4>
           </div>
-        </div>    
-              
-        </>
+          <div className="flex  justify-between">
+            <p className="text-white">#345</p>
+            <p className="text-white">{price || "100$"}</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
-        ) }
-
-
-export default Card
+export default Card;
