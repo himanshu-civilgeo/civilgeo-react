@@ -23,7 +23,7 @@ function Card({price = "150$"}) {
           </div>
           <div className="flex  justify-between">
             <p className="text-white">#345</p>
-            <p className="text-white">{price || "100$"}</p>
+            <p className="text-white tex">{price || "100$"}</p>
           </div>
         </div>
       </div>
